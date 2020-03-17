@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def hello():
+def index():
     return render_template("index.html")
 
 @app.route('/about')
@@ -15,6 +15,10 @@ def about():
 @app.route('/contact')
 def contact():
     return render_template("contact.html")
+
+@app.route('/carrers')
+def carrers():
+    return render_template("carrers.html")
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
