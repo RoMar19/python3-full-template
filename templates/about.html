@@ -15,6 +15,8 @@
 
     {% for member in company %}
 
+    {{ loop.index }}
+
 
     <div class="row featturete">
         <div class="col-md-7">
@@ -23,12 +25,12 @@
             {{ member.description }}
             </p>
         </div>
-        <div class="col md-5">
+        <div class="col-md-5">
         <img class="featurette-image img-responsive" src="{{ member.image_source }}">
         </div>
         </div>
         <hr class = featurette-divider>
-        
-        {% endfor %}
+
+    {% endfor %}
     
 {% endblock %}
